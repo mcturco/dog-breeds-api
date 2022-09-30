@@ -1,0 +1,245 @@
+openapi: 3.0.0
+servers:
+  - url: 'http://petstore.swagger.io/v2'
+info:
+  description: >-
+    An API where you can retrieve information on canine breeds recognized by the American Kennel Club (AKC).
+  version: 1.0.0
+  title: Dog Breeds API
+  license:
+    name: Apache-2.0
+    url: 'https://www.apache.org/licenses/LICENSE-2.0.html'
+tags:
+  - name: breed
+    description: Operations about a breed
+paths:
+  /breed:
+    post:
+      tags:
+        - breed
+      summary: Add a new breed to the registry
+      description: ''
+      operationId: addBreed
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Breed'
+        '405':
+          description: Invalid input
+      security:
+        - breedregistry_auth:
+            - 'write:breeds'
+            - 'read:breeds'
+      requestBody:
+        $ref: '#/components/requestBodies/Breed'
+  /breed/{id}:
+    get:
+      tags:
+        - breed
+      summary: Retrieve information of specified breed
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: number
+          required: true
+          description: The ID of the breed
+      description: ''
+      operationId: getBreed
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Breed'
+        '400':
+          description: Invalid ID supplied
+        '404':
+          description: Breed not found
+        '405':
+          description: Validation exception
+      security:
+        - breedregistry_auth:
+            - 'write:breeds'
+            - 'read:breeds'
+    put:
+      tags:
+        - breed
+      summary: Update an existing breed
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: number
+          required: true
+          description: The ID of the breed
+      description: ''
+      operationId: updateBreed
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Breed'
+        '400':
+          description: Invalid ID supplied
+        '404':
+          description: Breed not found
+        '405':
+          description: Validation exception
+      security:
+        - breedregistry_auth:
+            - 'write:breeds'
+            - 'read:breeds'
+      requestBody:
+        $ref: '#/components/requestBodies/Breed'
+externalDocs:
+  description: Find out more about Swagger
+  url: 'http://swagger.io'
+components:
+  requestBodies:
+    Breed:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Breed'
+      description: Breed object containing information about the breed
+      required: true
+  securitySchemes:
+    breedregistry_auth:
+      type: oauth2
+      flows:
+        implicit:
+          authorizationUrl: 'http://petstore.swagger.io/api/oauth/dialog'
+          scopes:
+            'write:breeds': modify breeds in the registry
+            'read:breeds': read breed information from the registry
+    api_key:
+      type: apiKey
+      name: api_key
+      in: header
+  schemas:
+    Breed:
+      title: Breed Information
+      description: Information about a single breed
+      type: object
+      required:
+        - id
+        - name
+      properties:
+        id:
+          type: integer
+          format: int64
+          description: ID of the breed
+        name:
+          type: string
+          description: Name of the breed
+        group:
+          type: string
+          description: The group in which the breed belongs to
+          enum:
+            - Sporting
+            - Hound
+            - Working
+            - Terrier
+            - Toy
+            - Non-Sporting
+            - Herding
+            - Miscellaneous
+        function:
+          type: string
+          description: Original function of the breed
+        coat:
+          type: string
+          description: A description of the coat characteristics of the breed
+        color:
+          type: string
+          description: Color(s) of the breed
+        height:
+          type: object
+          description: Average height of the breed, per male and female
+          properties:
+            male:
+              type: string
+              description: Average height of the male in inches
+            female:
+              type: string
+              description: Average height of the female in inches
+        weight:
+          type: object 
+          description: Average weight of the breed, per male and female
+          properties:
+            male:
+              type: string
+              description: Average weight of the male in pounds (lbs)
+            female:
+              type: string
+              description: Average weight of the female in pounds (lbs)
+        characteristics:
+          type: object
+          description: Lists characteristics of the breed and provides a value for that characteristic on a scale of 1-5
+          properties:
+            energy:
+              type: number
+              description: Energy level of the breed
+              minimum: 1
+              maximum: 5
+            exercise:
+              type: number
+              description: Exercise requirements of the breed
+              minimum: 1
+              maximum: 5
+            playfulness:
+              type: number
+              description: Playfulness of the breed
+              minimum: 1
+              maximum: 5
+            affection:
+              type: number
+              description: Affection level of the breed
+              minimum: 1
+              maximum: 5
+            friendliness:
+              type: object
+              description: Friendliness rating
+              properties:
+                pets:
+                  type: number,
+                  description: Friendliness of the breed toward other pets
+                  minimum: 1
+                  maximum: 5
+                strangers:
+                  type: number,
+                  description: Friendliness of the breed toward other pets
+                  minimum: 1
+                  maximum: 5
+            training:
+              type: number
+              description: Ease of training of the breed
+              minimum: 1
+              maximum: 5
+            grooming:
+              type: number
+              description: Grooming requirements of the breed
+              minimum: 1
+              maximum: 5
+        life_span:
+          type: string
+          description: Life span of the breed
+    ApiResponse:
+      title: An uploaded response
+      description: Describes the result of uploading an image resource
+      type: object
+      properties:
+        code:
+          type: integer
+          format: int32
+        type:
+          type: string
+        message:
+          type: string
