@@ -1,0 +1,17 @@
+id = 5d313e94-39dc-4a63-ac14-e7b1eac6cf9f
+
+[relations]
+
+[relations.collections]
+rootDirectory = postman/collections
+files[] = {"id":"17992947-c492a661-66f1-4c99-956c-2742984834d2","path":"Breeds.json","metaData":{}}
+
+[relations.collections.metaData]
+
+[relations.apiDefinition]
+rootDirectory = defs
+files[] = {"path":"breeds.yaml","metaData":{}}
+
+[relations.apiDefinition.metaData]
+type = openapi:3
+rootFiles[] = breeds.yaml
