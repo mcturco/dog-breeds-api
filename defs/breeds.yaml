@@ -4,7 +4,7 @@ servers:
 info:
   description: >-
     An API where you can retrieve information on canine breeds recognized by the American Kennel Club (AKC).
-  version: 1.0.0
+  version: 1.0.1
   title: Dog Breeds API
   license:
     name: Apache-2.0
