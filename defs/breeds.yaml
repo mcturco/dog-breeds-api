@@ -209,12 +209,12 @@ components:
               description: Friendliness rating
               properties:
                 pets:
-                  type: number,
+                  type: number
                   description: Friendliness of the breed toward other pets
                   minimum: 1
                   maximum: 5
                 strangers:
-                  type: number,
+                  type: number
                   description: Friendliness of the breed toward other pets
                   minimum: 1
                   maximum: 5

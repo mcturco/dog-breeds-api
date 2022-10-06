@@ -1,0 +1,1773 @@
+{
+	"info": {
+		"_postman_id": "c492a661-66f1-4c99-956c-2742984834d2",
+		"name": "Breeds",
+		"description": "An API where you can retrieve information on canine breeds recognized by the American Kennel Club (AKC).",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "17992947-c492a661-66f1-4c99-956c-2742984834d2"
+	},
+	"item": [
+		{
+			"name": "breed",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "Retrieve information of specified breed",
+							"id": "12c1fd71-46e3-4a63-894f-d7491d190a21",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "scope",
+											"value": "write:breeds read:breeds",
+											"type": "string"
+										},
+										{
+											"key": "accessTokenUrl",
+											"value": "https://petstore.swagger.io/api/oauth/dialog",
+											"type": "string"
+										},
+										{
+											"key": "authUrl",
+											"value": "https://petstore.swagger.io/api/oauth/dialog",
+											"type": "string"
+										},
+										{
+											"key": "grant_type",
+											"value": "authorization_code",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/breed/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"breed",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "3",
+											"description": "(Required) The ID of the breed"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "b4c5a961-5084-4b31-9a5e-7edf6730a7fe",
+									"name": "successful operation",
+									"originalRequest": {
+										"auth": {
+											"type": "oauth2",
+											"oauth2": [
+												{
+													"key": "accessToken",
+													"type": "any"
+												},
+												{
+													"key": "addTokenTo",
+													"type": "any"
+												},
+												{
+													"key": "callBackUrl",
+													"type": "any"
+												},
+												{
+													"key": "authUrl",
+													"value": "https://petstore.swagger.io/api/oauth/dialog",
+													"type": "string"
+												},
+												{
+													"key": "accessTokenUrl",
+													"value": "https://petstore.swagger.io/api/oauth/dialog",
+													"type": "string"
+												},
+												{
+													"key": "clientId",
+													"type": "any"
+												},
+												{
+													"key": "clientSecret",
+													"type": "any"
+												},
+												{
+													"key": "clientAuth",
+													"type": "any"
+												},
+												{
+													"key": "grantType",
+													"type": "any"
+												},
+												{
+													"key": "scope",
+													"value": "write:breeds read:breeds",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"type": "any"
+												},
+												{
+													"key": "password",
+													"type": "any"
+												},
+												{
+													"key": "tokenType",
+													"type": "any"
+												},
+												{
+													"key": "redirectUri",
+													"type": "any"
+												},
+												{
+													"key": "refreshToken",
+													"type": "any"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/breed/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"breed",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "3",
+													"description": "(Required) The ID of the breed"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": 3,\n  \"name\": \"Excepteur velit adipisicing elit tempor\",\n  \"group\": \"Hound\",\n  \"function\": \"et dolore id ipsum tempor\",\n  \"coat\": \"officia nulla et est\",\n  \"color\": \"ipsum dolor\",\n  \"height\": {\n    \"male\": \"quis non sint\",\n    \"female\": \"reprehenderit Ut magna exercitatio\"\n  },\n  \"weight\": {\n    \"male\": \"tempor d\",\n    \"female\": \"nostrud irure esse eiusmod\"\n  },\n  \"characteristics\": {\n    \"energy\": 3.4918266127265944,\n    \"exercise\": 2.5108546358020627,\n    \"playfulness\": 2.5176322981927157,\n    \"affection\": 4.270212903798326,\n    \"friendliness\": {\n      \"pets\": 4.971494998711631,\n      \"strangers\": 1.9567476597097624\n    },\n    \"training\": 2.2778064294898313,\n    \"grooming\": 4.61701561807693\n  },\n  \"life_span\": \"reprehenderit anim\"\n}"
+								},
+								{
+									"id": "06a9f637-0112-4bd6-abac-c96df7795f0e",
+									"name": "Invalid ID supplied",
+									"originalRequest": {
+										"auth": {
+											"type": "oauth2",
+											"oauth2": [
+												{
+													"key": "accessToken",
+													"type": "any"
+												},
+												{
+													"key": "addTokenTo",
+													"type": "any"
+												},
+												{
+													"key": "callBackUrl",
+													"type": "any"
+												},
+												{
+													"key": "authUrl",
+													"value": "https://petstore.swagger.io/api/oauth/dialog",
+													"type": "string"
+												},
+												{
+													"key": "accessTokenUrl",
+													"value": "https://petstore.swagger.io/api/oauth/dialog",
+													"type": "string"
+												},
+												{
+													"key": "clientId",
+													"type": "any"
+												},
+												{
+													"key": "clientSecret",
+													"type": "any"
+												},
+												{
+													"key": "clientAuth",
+													"type": "any"
+												},
+												{
+													"key": "grantType",
+													"type": "any"
+												},
+												{
+													"key": "scope",
+													"value": "write:breeds read:breeds",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"type": "any"
+												},
+												{
+													"key": "password",
+													"type": "any"
+												},
+												{
+													"key": "tokenType",
+													"type": "any"
+												},
+												{
+													"key": "redirectUri",
+													"type": "any"
+												},
+												{
+													"key": "refreshToken",
+													"type": "any"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/breed/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"breed",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "3",
+													"description": "(Required) The ID of the breed"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"id": "49a16dfb-9f24-4a63-95ca-ec084f9844b4",
+									"name": "Breed not found",
+									"originalRequest": {
+										"auth": {
+											"type": "oauth2",
+											"oauth2": [
+												{
+													"key": "accessToken",
+													"type": "any"
+												},
+												{
+													"key": "addTokenTo",
+													"type": "any"
+												},
+												{
+													"key": "callBackUrl",
+													"type": "any"
+												},
+												{
+													"key": "authUrl",
+													"value": "https://petstore.swagger.io/api/oauth/dialog",
+													"type": "string"
+												},
+												{
+													"key": "accessTokenUrl",
+													"value": "https://petstore.swagger.io/api/oauth/dialog",
+													"type": "string"
+												},
+												{
+													"key": "clientId",
+													"type": "any"
+												},
+												{
+													"key": "clientSecret",
+													"type": "any"
+												},
+												{
+													"key": "clientAuth",
+													"type": "any"
+												},
+												{
+													"key": "grantType",
+													"type": "any"
+												},
+												{
+													"key": "scope",
+													"value": "write:breeds read:breeds",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"type": "any"
+												},
+												{
+													"key": "password",
+													"type": "any"
+												},
+												{
+													"key": "tokenType",
+													"type": "any"
+												},
+												{
+													"key": "redirectUri",
+													"type": "any"
+												},
+												{
+													"key": "refreshToken",
+													"type": "any"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/breed/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"breed",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "3",
+													"description": "(Required) The ID of the breed"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"id": "9fcc0037-a781-48d9-b119-95730e99cb76",
+									"name": "Validation exception",
+									"originalRequest": {
+										"auth": {
+											"type": "oauth2",
+											"oauth2": [
+												{
+													"key": "accessToken",
+													"type": "any"
+												},
+												{
+													"key": "addTokenTo",
+													"type": "any"
+												},
+												{
+													"key": "callBackUrl",
+													"type": "any"
+												},
+												{
+													"key": "authUrl",
+													"value": "https://petstore.swagger.io/api/oauth/dialog",
+													"type": "string"
+												},
+												{
+													"key": "accessTokenUrl",
+													"value": "https://petstore.swagger.io/api/oauth/dialog",
+													"type": "string"
+												},
+												{
+													"key": "clientId",
+													"type": "any"
+												},
+												{
+													"key": "clientSecret",
+													"type": "any"
+												},
+												{
+													"key": "clientAuth",
+													"type": "any"
+												},
+												{
+													"key": "grantType",
+													"type": "any"
+												},
+												{
+													"key": "scope",
+													"value": "write:breeds read:breeds",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"type": "any"
+												},
+												{
+													"key": "password",
+													"type": "any"
+												},
+												{
+													"key": "tokenType",
+													"type": "any"
+												},
+												{
+													"key": "redirectUri",
+													"type": "any"
+												},
+												{
+													"key": "refreshToken",
+													"type": "any"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/breed/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"breed",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "3",
+													"description": "(Required) The ID of the breed"
+												}
+											]
+										}
+									},
+									"status": "Method Not Allowed",
+									"code": 405,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"id": "92e7fb54-c816-4acb-92ec-dbb24bb96a36",
+									"name": "A server error response",
+									"originalRequest": {
+										"auth": {
+											"type": "oauth2",
+											"oauth2": [
+												{
+													"key": "accessToken",
+													"type": "any"
+												},
+												{
+													"key": "addTokenTo",
+													"type": "any"
+												},
+												{
+													"key": "callBackUrl",
+													"type": "any"
+												},
+												{
+													"key": "authUrl",
+													"value": "https://petstore.swagger.io/api/oauth/dialog",
+													"type": "string"
+												},
+												{
+													"key": "accessTokenUrl",
+													"value": "https://petstore.swagger.io/api/oauth/dialog",
+													"type": "string"
+												},
+												{
+													"key": "clientId",
+													"type": "any"
+												},
+												{
+													"key": "clientSecret",
+													"type": "any"
+												},
+												{
+													"key": "clientAuth",
+													"type": "any"
+												},
+												{
+													"key": "grantType",
+													"type": "any"
+												},
+												{
+													"key": "scope",
+													"value": "write:breeds read:breeds",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"type": "any"
+												},
+												{
+													"key": "password",
+													"type": "any"
+												},
+												{
+													"key": "tokenType",
+													"type": "any"
+												},
+												{
+													"key": "redirectUri",
+													"type": "any"
+												},
+												{
+													"key": "refreshToken",
+													"type": "any"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/breed/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"breed",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "3",
+													"description": "(Required) The ID of the breed"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Update an existing breed",
+							"id": "16d9f53c-fbc3-42b8-9730-28021b6961bd",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "scope",
+											"value": "write:breeds read:breeds",
+											"type": "string"
+										},
+										{
+											"key": "accessTokenUrl",
+											"value": "https://petstore.swagger.io/api/oauth/dialog",
+											"type": "string"
+										},
+										{
+											"key": "authUrl",
+											"value": "https://petstore.swagger.io/api/oauth/dialog",
+											"type": "string"
+										},
+										{
+											"key": "grant_type",
+											"value": "authorization_code",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 1106489,\n  \"name\": \"Excepteur velit adipisicing elit tempor\",\n  \"group\": \"Hound\",\n  \"function\": \"et dolore id ipsum tempor\",\n  \"coat\": \"officia nulla et est\",\n  \"color\": \"ipsum dolor\",\n  \"height\": {\n    \"male\": \"quis non sint\",\n    \"female\": \"reprehenderit Ut magna exercitatio\"\n  },\n  \"weight\": {\n    \"male\": \"tempor d\",\n    \"female\": \"nostrud irure esse eiusmod\"\n  },\n  \"characteristics\": {\n    \"energy\": 3.4918266127265944,\n    \"exercise\": 2.5108546358020627,\n    \"playfulness\": 2.5176322981927157,\n    \"affection\": 4.270212903798326,\n    \"friendliness\": {\n      \"pets\": 4.971494998711631,\n      \"strangers\": 1.9567476597097624\n    },\n    \"training\": 2.2778064294898313,\n    \"grooming\": 4.61701561807693\n  },\n  \"life_span\": \"reprehenderit anim\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/breed/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"breed",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<number>",
+											"description": "(Required) The ID of the breed"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "2f01a128-742f-4333-909b-2ff5cd940c15",
+									"name": "successful operation",
+									"originalRequest": {
+										"auth": {
+											"type": "oauth2",
+											"oauth2": [
+												{
+													"key": "accessToken",
+													"type": "any"
+												},
+												{
+													"key": "addTokenTo",
+													"type": "any"
+												},
+												{
+													"key": "callBackUrl",
+													"type": "any"
+												},
+												{
+													"key": "authUrl",
+													"value": "https://petstore.swagger.io/api/oauth/dialog",
+													"type": "string"
+												},
+												{
+													"key": "accessTokenUrl",
+													"value": "https://petstore.swagger.io/api/oauth/dialog",
+													"type": "string"
+												},
+												{
+													"key": "clientId",
+													"type": "any"
+												},
+												{
+													"key": "clientSecret",
+													"type": "any"
+												},
+												{
+													"key": "clientAuth",
+													"type": "any"
+												},
+												{
+													"key": "grantType",
+													"type": "any"
+												},
+												{
+													"key": "scope",
+													"value": "write:breeds read:breeds",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"type": "any"
+												},
+												{
+													"key": "password",
+													"type": "any"
+												},
+												{
+													"key": "tokenType",
+													"type": "any"
+												},
+												{
+													"key": "redirectUri",
+													"type": "any"
+												},
+												{
+													"key": "refreshToken",
+													"type": "any"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": 1106489,\n  \"name\": \"Excepteur velit adipisicing elit tempor\",\n  \"group\": \"Hound\",\n  \"function\": \"et dolore id ipsum tempor\",\n  \"coat\": \"officia nulla et est\",\n  \"color\": \"ipsum dolor\",\n  \"height\": {\n    \"male\": \"quis non sint\",\n    \"female\": \"reprehenderit Ut magna exercitatio\"\n  },\n  \"weight\": {\n    \"male\": \"tempor d\",\n    \"female\": \"nostrud irure esse eiusmod\"\n  },\n  \"characteristics\": {\n    \"energy\": 3.4918266127265944,\n    \"exercise\": 2.5108546358020627,\n    \"playfulness\": 2.5176322981927157,\n    \"affection\": 4.270212903798326,\n    \"friendliness\": {\n      \"pets\": 4.971494998711631,\n      \"strangers\": 1.9567476597097624\n    },\n    \"training\": 2.2778064294898313,\n    \"grooming\": 4.61701561807693\n  },\n  \"life_span\": \"reprehenderit anim\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/breed/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"breed",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<number>",
+													"description": "(Required) The ID of the breed"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": 1106489,\n  \"name\": \"Excepteur velit adipisicing elit tempor\",\n  \"group\": \"Hound\",\n  \"function\": \"et dolore id ipsum tempor\",\n  \"coat\": \"officia nulla et est\",\n  \"color\": \"ipsum dolor\",\n  \"height\": {\n    \"male\": \"quis non sint\",\n    \"female\": \"reprehenderit Ut magna exercitatio\"\n  },\n  \"weight\": {\n    \"male\": \"tempor d\",\n    \"female\": \"nostrud irure esse eiusmod\"\n  },\n  \"characteristics\": {\n    \"energy\": 3.4918266127265944,\n    \"exercise\": 2.5108546358020627,\n    \"playfulness\": 2.5176322981927157,\n    \"affection\": 4.270212903798326,\n    \"friendliness\": {\n      \"pets\": 4.971494998711631,\n      \"strangers\": 1.9567476597097624\n    },\n    \"training\": 2.2778064294898313,\n    \"grooming\": 4.61701561807693\n  },\n  \"life_span\": \"reprehenderit anim\"\n}"
+								},
+								{
+									"id": "0e64ccfb-c8a8-4994-b1e3-7ca14aeb44d3",
+									"name": "Invalid ID supplied",
+									"originalRequest": {
+										"auth": {
+											"type": "oauth2",
+											"oauth2": [
+												{
+													"key": "accessToken",
+													"type": "any"
+												},
+												{
+													"key": "addTokenTo",
+													"type": "any"
+												},
+												{
+													"key": "callBackUrl",
+													"type": "any"
+												},
+												{
+													"key": "authUrl",
+													"value": "https://petstore.swagger.io/api/oauth/dialog",
+													"type": "string"
+												},
+												{
+													"key": "accessTokenUrl",
+													"value": "https://petstore.swagger.io/api/oauth/dialog",
+													"type": "string"
+												},
+												{
+													"key": "clientId",
+													"type": "any"
+												},
+												{
+													"key": "clientSecret",
+													"type": "any"
+												},
+												{
+													"key": "clientAuth",
+													"type": "any"
+												},
+												{
+													"key": "grantType",
+													"type": "any"
+												},
+												{
+													"key": "scope",
+													"value": "write:breeds read:breeds",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"type": "any"
+												},
+												{
+													"key": "password",
+													"type": "any"
+												},
+												{
+													"key": "tokenType",
+													"type": "any"
+												},
+												{
+													"key": "redirectUri",
+													"type": "any"
+												},
+												{
+													"key": "refreshToken",
+													"type": "any"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": 1106489,\n  \"name\": \"Excepteur velit adipisicing elit tempor\",\n  \"group\": \"Hound\",\n  \"function\": \"et dolore id ipsum tempor\",\n  \"coat\": \"officia nulla et est\",\n  \"color\": \"ipsum dolor\",\n  \"height\": {\n    \"male\": \"quis non sint\",\n    \"female\": \"reprehenderit Ut magna exercitatio\"\n  },\n  \"weight\": {\n    \"male\": \"tempor d\",\n    \"female\": \"nostrud irure esse eiusmod\"\n  },\n  \"characteristics\": {\n    \"energy\": 3.4918266127265944,\n    \"exercise\": 2.5108546358020627,\n    \"playfulness\": 2.5176322981927157,\n    \"affection\": 4.270212903798326,\n    \"friendliness\": {\n      \"pets\": 4.971494998711631,\n      \"strangers\": 1.9567476597097624\n    },\n    \"training\": 2.2778064294898313,\n    \"grooming\": 4.61701561807693\n  },\n  \"life_span\": \"reprehenderit anim\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/breed/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"breed",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<number>",
+													"description": "(Required) The ID of the breed"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"id": "cf616097-2c3e-4dea-9283-295a87f925d8",
+									"name": "Breed not found",
+									"originalRequest": {
+										"auth": {
+											"type": "oauth2",
+											"oauth2": [
+												{
+													"key": "accessToken",
+													"type": "any"
+												},
+												{
+													"key": "addTokenTo",
+													"type": "any"
+												},
+												{
+													"key": "callBackUrl",
+													"type": "any"
+												},
+												{
+													"key": "authUrl",
+													"value": "https://petstore.swagger.io/api/oauth/dialog",
+													"type": "string"
+												},
+												{
+													"key": "accessTokenUrl",
+													"value": "https://petstore.swagger.io/api/oauth/dialog",
+													"type": "string"
+												},
+												{
+													"key": "clientId",
+													"type": "any"
+												},
+												{
+													"key": "clientSecret",
+													"type": "any"
+												},
+												{
+													"key": "clientAuth",
+													"type": "any"
+												},
+												{
+													"key": "grantType",
+													"type": "any"
+												},
+												{
+													"key": "scope",
+													"value": "write:breeds read:breeds",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"type": "any"
+												},
+												{
+													"key": "password",
+													"type": "any"
+												},
+												{
+													"key": "tokenType",
+													"type": "any"
+												},
+												{
+													"key": "redirectUri",
+													"type": "any"
+												},
+												{
+													"key": "refreshToken",
+													"type": "any"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": 1106489,\n  \"name\": \"Excepteur velit adipisicing elit tempor\",\n  \"group\": \"Hound\",\n  \"function\": \"et dolore id ipsum tempor\",\n  \"coat\": \"officia nulla et est\",\n  \"color\": \"ipsum dolor\",\n  \"height\": {\n    \"male\": \"quis non sint\",\n    \"female\": \"reprehenderit Ut magna exercitatio\"\n  },\n  \"weight\": {\n    \"male\": \"tempor d\",\n    \"female\": \"nostrud irure esse eiusmod\"\n  },\n  \"characteristics\": {\n    \"energy\": 3.4918266127265944,\n    \"exercise\": 2.5108546358020627,\n    \"playfulness\": 2.5176322981927157,\n    \"affection\": 4.270212903798326,\n    \"friendliness\": {\n      \"pets\": 4.971494998711631,\n      \"strangers\": 1.9567476597097624\n    },\n    \"training\": 2.2778064294898313,\n    \"grooming\": 4.61701561807693\n  },\n  \"life_span\": \"reprehenderit anim\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/breed/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"breed",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<number>",
+													"description": "(Required) The ID of the breed"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"id": "93ece175-7ad5-4032-9b76-106c842a625c",
+									"name": "Validation exception",
+									"originalRequest": {
+										"auth": {
+											"type": "oauth2",
+											"oauth2": [
+												{
+													"key": "accessToken",
+													"type": "any"
+												},
+												{
+													"key": "addTokenTo",
+													"type": "any"
+												},
+												{
+													"key": "callBackUrl",
+													"type": "any"
+												},
+												{
+													"key": "authUrl",
+													"value": "https://petstore.swagger.io/api/oauth/dialog",
+													"type": "string"
+												},
+												{
+													"key": "accessTokenUrl",
+													"value": "https://petstore.swagger.io/api/oauth/dialog",
+													"type": "string"
+												},
+												{
+													"key": "clientId",
+													"type": "any"
+												},
+												{
+													"key": "clientSecret",
+													"type": "any"
+												},
+												{
+													"key": "clientAuth",
+													"type": "any"
+												},
+												{
+													"key": "grantType",
+													"type": "any"
+												},
+												{
+													"key": "scope",
+													"value": "write:breeds read:breeds",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"type": "any"
+												},
+												{
+													"key": "password",
+													"type": "any"
+												},
+												{
+													"key": "tokenType",
+													"type": "any"
+												},
+												{
+													"key": "redirectUri",
+													"type": "any"
+												},
+												{
+													"key": "refreshToken",
+													"type": "any"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": 1106489,\n  \"name\": \"Excepteur velit adipisicing elit tempor\",\n  \"group\": \"Hound\",\n  \"function\": \"et dolore id ipsum tempor\",\n  \"coat\": \"officia nulla et est\",\n  \"color\": \"ipsum dolor\",\n  \"height\": {\n    \"male\": \"quis non sint\",\n    \"female\": \"reprehenderit Ut magna exercitatio\"\n  },\n  \"weight\": {\n    \"male\": \"tempor d\",\n    \"female\": \"nostrud irure esse eiusmod\"\n  },\n  \"characteristics\": {\n    \"energy\": 3.4918266127265944,\n    \"exercise\": 2.5108546358020627,\n    \"playfulness\": 2.5176322981927157,\n    \"affection\": 4.270212903798326,\n    \"friendliness\": {\n      \"pets\": 4.971494998711631,\n      \"strangers\": 1.9567476597097624\n    },\n    \"training\": 2.2778064294898313,\n    \"grooming\": 4.61701561807693\n  },\n  \"life_span\": \"reprehenderit anim\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/breed/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"breed",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<number>",
+													"description": "(Required) The ID of the breed"
+												}
+											]
+										}
+									},
+									"status": "Method Not Allowed",
+									"code": 405,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"id": "d5257bf4-b30e-43e7-a132-062aa39ff3d4",
+									"name": "A server error response",
+									"originalRequest": {
+										"auth": {
+											"type": "oauth2",
+											"oauth2": [
+												{
+													"key": "accessToken",
+													"type": "any"
+												},
+												{
+													"key": "addTokenTo",
+													"type": "any"
+												},
+												{
+													"key": "callBackUrl",
+													"type": "any"
+												},
+												{
+													"key": "authUrl",
+													"value": "https://petstore.swagger.io/api/oauth/dialog",
+													"type": "string"
+												},
+												{
+													"key": "accessTokenUrl",
+													"value": "https://petstore.swagger.io/api/oauth/dialog",
+													"type": "string"
+												},
+												{
+													"key": "clientId",
+													"type": "any"
+												},
+												{
+													"key": "clientSecret",
+													"type": "any"
+												},
+												{
+													"key": "clientAuth",
+													"type": "any"
+												},
+												{
+													"key": "grantType",
+													"type": "any"
+												},
+												{
+													"key": "scope",
+													"value": "write:breeds read:breeds",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"type": "any"
+												},
+												{
+													"key": "password",
+													"type": "any"
+												},
+												{
+													"key": "tokenType",
+													"type": "any"
+												},
+												{
+													"key": "redirectUri",
+													"type": "any"
+												},
+												{
+													"key": "refreshToken",
+													"type": "any"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": 1106489,\n  \"name\": \"Excepteur velit adipisicing elit tempor\",\n  \"group\": \"Hound\",\n  \"function\": \"et dolore id ipsum tempor\",\n  \"coat\": \"officia nulla et est\",\n  \"color\": \"ipsum dolor\",\n  \"height\": {\n    \"male\": \"quis non sint\",\n    \"female\": \"reprehenderit Ut magna exercitatio\"\n  },\n  \"weight\": {\n    \"male\": \"tempor d\",\n    \"female\": \"nostrud irure esse eiusmod\"\n  },\n  \"characteristics\": {\n    \"energy\": 3.4918266127265944,\n    \"exercise\": 2.5108546358020627,\n    \"playfulness\": 2.5176322981927157,\n    \"affection\": 4.270212903798326,\n    \"friendliness\": {\n      \"pets\": 4.971494998711631,\n      \"strangers\": 1.9567476597097624\n    },\n    \"training\": 2.2778064294898313,\n    \"grooming\": 4.61701561807693\n  },\n  \"life_span\": \"reprehenderit anim\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/breed/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"breed",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<number>",
+													"description": "(Required) The ID of the breed"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					],
+					"id": "c0b35d32-4aa5-47f1-9169-f188e8401c1c"
+				},
+				{
+					"name": "Add a new breed to the registry",
+					"id": "162d01d1-e439-4b6d-b9ef-a2b3501d4d92",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "scope",
+									"value": "write:breeds read:breeds",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "https://petstore.swagger.io/api/oauth/dialog",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "https://petstore.swagger.io/api/oauth/dialog",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "authorization_code",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 1106489,\n  \"name\": \"Excepteur velit adipisicing elit tempor\",\n  \"group\": \"Hound\",\n  \"function\": \"et dolore id ipsum tempor\",\n  \"coat\": \"officia nulla et est\",\n  \"color\": \"ipsum dolor\",\n  \"height\": {\n    \"male\": \"quis non sint\",\n    \"female\": \"reprehenderit Ut magna exercitatio\"\n  },\n  \"weight\": {\n    \"male\": \"tempor d\",\n    \"female\": \"nostrud irure esse eiusmod\"\n  },\n  \"characteristics\": {\n    \"energy\": 3.4918266127265944,\n    \"exercise\": 2.5108546358020627,\n    \"playfulness\": 2.5176322981927157,\n    \"affection\": 4.270212903798326,\n    \"friendliness\": {\n      \"pets\": 4.971494998711631,\n      \"strangers\": 1.9567476597097624\n    },\n    \"training\": 2.2778064294898313,\n    \"grooming\": 4.61701561807693\n  },\n  \"life_span\": \"reprehenderit anim\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/breed",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"breed"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "f4a978b7-1e66-4b2c-a59c-91fdf680a923",
+							"name": "successful operation",
+							"originalRequest": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessToken",
+											"type": "any"
+										},
+										{
+											"key": "addTokenTo",
+											"type": "any"
+										},
+										{
+											"key": "callBackUrl",
+											"type": "any"
+										},
+										{
+											"key": "authUrl",
+											"value": "https://petstore.swagger.io/api/oauth/dialog",
+											"type": "string"
+										},
+										{
+											"key": "accessTokenUrl",
+											"value": "https://petstore.swagger.io/api/oauth/dialog",
+											"type": "string"
+										},
+										{
+											"key": "clientId",
+											"type": "any"
+										},
+										{
+											"key": "clientSecret",
+											"type": "any"
+										},
+										{
+											"key": "clientAuth",
+											"type": "any"
+										},
+										{
+											"key": "grantType",
+											"type": "any"
+										},
+										{
+											"key": "scope",
+											"value": "write:breeds read:breeds",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"type": "any"
+										},
+										{
+											"key": "password",
+											"type": "any"
+										},
+										{
+											"key": "tokenType",
+											"type": "any"
+										},
+										{
+											"key": "redirectUri",
+											"type": "any"
+										},
+										{
+											"key": "refreshToken",
+											"type": "any"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 1106489,\n  \"name\": \"Excepteur velit adipisicing elit tempor\",\n  \"group\": \"Hound\",\n  \"function\": \"et dolore id ipsum tempor\",\n  \"coat\": \"officia nulla et est\",\n  \"color\": \"ipsum dolor\",\n  \"height\": {\n    \"male\": \"quis non sint\",\n    \"female\": \"reprehenderit Ut magna exercitatio\"\n  },\n  \"weight\": {\n    \"male\": \"tempor d\",\n    \"female\": \"nostrud irure esse eiusmod\"\n  },\n  \"characteristics\": {\n    \"energy\": 3.4918266127265944,\n    \"exercise\": 2.5108546358020627,\n    \"playfulness\": 2.5176322981927157,\n    \"affection\": 4.270212903798326,\n    \"friendliness\": {\n      \"pets\": 4.971494998711631,\n      \"strangers\": 1.9567476597097624\n    },\n    \"training\": 2.2778064294898313,\n    \"grooming\": 4.61701561807693\n  },\n  \"life_span\": \"reprehenderit anim\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/breed",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"breed"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"id\": 1106489,\n  \"name\": \"Excepteur velit adipisicing elit tempor\",\n  \"group\": \"Hound\",\n  \"function\": \"et dolore id ipsum tempor\",\n  \"coat\": \"officia nulla et est\",\n  \"color\": \"ipsum dolor\",\n  \"height\": {\n    \"male\": \"quis non sint\",\n    \"female\": \"reprehenderit Ut magna exercitatio\"\n  },\n  \"weight\": {\n    \"male\": \"tempor d\",\n    \"female\": \"nostrud irure esse eiusmod\"\n  },\n  \"characteristics\": {\n    \"energy\": 3.4918266127265944,\n    \"exercise\": 2.5108546358020627,\n    \"playfulness\": 2.5176322981927157,\n    \"affection\": 4.270212903798326,\n    \"friendliness\": {\n      \"pets\": 4.971494998711631,\n      \"strangers\": 1.9567476597097624\n    },\n    \"training\": 2.2778064294898313,\n    \"grooming\": 4.61701561807693\n  },\n  \"life_span\": \"reprehenderit anim\"\n}"
+						},
+						{
+							"id": "bcf44057-4ace-4c6e-b4d3-75463b3ce06c",
+							"name": "Invalid input",
+							"originalRequest": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessToken",
+											"type": "any"
+										},
+										{
+											"key": "addTokenTo",
+											"type": "any"
+										},
+										{
+											"key": "callBackUrl",
+											"type": "any"
+										},
+										{
+											"key": "authUrl",
+											"value": "https://petstore.swagger.io/api/oauth/dialog",
+											"type": "string"
+										},
+										{
+											"key": "accessTokenUrl",
+											"value": "https://petstore.swagger.io/api/oauth/dialog",
+											"type": "string"
+										},
+										{
+											"key": "clientId",
+											"type": "any"
+										},
+										{
+											"key": "clientSecret",
+											"type": "any"
+										},
+										{
+											"key": "clientAuth",
+											"type": "any"
+										},
+										{
+											"key": "grantType",
+											"type": "any"
+										},
+										{
+											"key": "scope",
+											"value": "write:breeds read:breeds",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"type": "any"
+										},
+										{
+											"key": "password",
+											"type": "any"
+										},
+										{
+											"key": "tokenType",
+											"type": "any"
+										},
+										{
+											"key": "redirectUri",
+											"type": "any"
+										},
+										{
+											"key": "refreshToken",
+											"type": "any"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 1106489,\n  \"name\": \"Excepteur velit adipisicing elit tempor\",\n  \"group\": \"Hound\",\n  \"function\": \"et dolore id ipsum tempor\",\n  \"coat\": \"officia nulla et est\",\n  \"color\": \"ipsum dolor\",\n  \"height\": {\n    \"male\": \"quis non sint\",\n    \"female\": \"reprehenderit Ut magna exercitatio\"\n  },\n  \"weight\": {\n    \"male\": \"tempor d\",\n    \"female\": \"nostrud irure esse eiusmod\"\n  },\n  \"characteristics\": {\n    \"energy\": 3.4918266127265944,\n    \"exercise\": 2.5108546358020627,\n    \"playfulness\": 2.5176322981927157,\n    \"affection\": 4.270212903798326,\n    \"friendliness\": {\n      \"pets\": 4.971494998711631,\n      \"strangers\": 1.9567476597097624\n    },\n    \"training\": 2.2778064294898313,\n    \"grooming\": 4.61701561807693\n  },\n  \"life_span\": \"reprehenderit anim\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/breed",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"breed"
+									]
+								}
+							},
+							"status": "Method Not Allowed",
+							"code": 405,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"id": "d5bb7b0f-331b-4e32-b543-c2c0074394f1",
+							"name": "A server error response",
+							"originalRequest": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessToken",
+											"type": "any"
+										},
+										{
+											"key": "addTokenTo",
+											"type": "any"
+										},
+										{
+											"key": "callBackUrl",
+											"type": "any"
+										},
+										{
+											"key": "authUrl",
+											"value": "https://petstore.swagger.io/api/oauth/dialog",
+											"type": "string"
+										},
+										{
+											"key": "accessTokenUrl",
+											"value": "https://petstore.swagger.io/api/oauth/dialog",
+											"type": "string"
+										},
+										{
+											"key": "clientId",
+											"type": "any"
+										},
+										{
+											"key": "clientSecret",
+											"type": "any"
+										},
+										{
+											"key": "clientAuth",
+											"type": "any"
+										},
+										{
+											"key": "grantType",
+											"type": "any"
+										},
+										{
+											"key": "scope",
+											"value": "write:breeds read:breeds",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"type": "any"
+										},
+										{
+											"key": "password",
+											"type": "any"
+										},
+										{
+											"key": "tokenType",
+											"type": "any"
+										},
+										{
+											"key": "redirectUri",
+											"type": "any"
+										},
+										{
+											"key": "refreshToken",
+											"type": "any"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 1106489,\n  \"name\": \"Excepteur velit adipisicing elit tempor\",\n  \"group\": \"Hound\",\n  \"function\": \"et dolore id ipsum tempor\",\n  \"coat\": \"officia nulla et est\",\n  \"color\": \"ipsum dolor\",\n  \"height\": {\n    \"male\": \"quis non sint\",\n    \"female\": \"reprehenderit Ut magna exercitatio\"\n  },\n  \"weight\": {\n    \"male\": \"tempor d\",\n    \"female\": \"nostrud irure esse eiusmod\"\n  },\n  \"characteristics\": {\n    \"energy\": 3.4918266127265944,\n    \"exercise\": 2.5108546358020627,\n    \"playfulness\": 2.5176322981927157,\n    \"affection\": 4.270212903798326,\n    \"friendliness\": {\n      \"pets\": 4.971494998711631,\n      \"strangers\": 1.9567476597097624\n    },\n    \"training\": 2.2778064294898313,\n    \"grooming\": 4.61701561807693\n  },\n  \"life_span\": \"reprehenderit anim\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/breed",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"breed"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			],
+			"id": "eba89904-14d9-4188-85d0-cab4ac153495"
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "scope",
+				"value": "write:breeds read:breeds",
+				"type": "string"
+			},
+			{
+				"key": "accessTokenUrl",
+				"value": "https://petstore.swagger.io/api/oauth/dialog",
+				"type": "string"
+			},
+			{
+				"key": "authUrl",
+				"value": "https://petstore.swagger.io/api/oauth/dialog",
+				"type": "string"
+			},
+			{
+				"key": "grant_type",
+				"value": "authorization_code",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "aa13a922-9bfb-4fa0-932b-f18ba7e9d760",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "96d65f2a-f5f0-42b7-b39f-9027bfd32da1",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "b1f3a0c0-4d98-4caa-8748-7a5455dc3c1c",
+			"key": "baseUrl",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}
