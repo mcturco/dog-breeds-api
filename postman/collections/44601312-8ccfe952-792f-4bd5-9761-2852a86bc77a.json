@@ -37,7 +37,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{baseURL}}/breeds/:id",
+					"raw": "{{baseURL}}/breeds/:id?newParam",
 					"host": [
 						"{{baseURL}}"
 					],
@@ -45,9 +45,15 @@
 						"breeds",
 						":id"
 					],
+					"query": [
+						{
+							"key": "newParam",
+							"value": null,
+							"type": "text"
+						}
+					],
 					"variable": [
 						{
-							"id": "02730410-c3e8-4487-aa24-336a9c89ba1a",
 							"key": "id",
 							"value": ""
 						}
@@ -66,12 +72,19 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "{{baseURL}}/breeds",
+					"raw": "{{baseURL}}/breeds?nfkjdhskjfhds",
 					"host": [
 						"{{baseURL}}"
 					],
 					"path": [
 						"breeds"
+					],
+					"query": [
+						{
+							"key": "nfkjdhskjfhds",
+							"value": null,
+							"type": "text"
+						}
 					]
 				}
 			},
