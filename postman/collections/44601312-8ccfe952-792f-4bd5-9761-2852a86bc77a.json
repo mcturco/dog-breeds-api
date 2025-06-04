@@ -1,0 +1,178 @@
+{
+	"info": {
+		"_postman_id": "44601312-8ccfe952-792f-4bd5-9761-2852a86bc77a",
+		"name": "Dog Breeds Reference",
+		"description": "Maintain a registry of dog breeds.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all breeds",
+			"id": "44601312-41ee6679-88a2-48df-82e3-488f4577d9a1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/breeds",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"breeds"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get a breed",
+			"id": "44601312-dd3b3db8-ba1c-4427-95cb-b0de6161d11a",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/breeds/:id",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"breeds",
+						":id"
+					],
+					"variable": [
+						{
+							"id": "02730410-c3e8-4487-aa24-336a9c89ba1a",
+							"key": "id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a breed",
+			"id": "44601312-bce1260a-4fa2-474d-8d3d-7f07cffd872f",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/breeds",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"breeds"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a breed",
+			"id": "44601312-f9683411-e06d-4e33-a898-8383892f0668",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/breeds/:id",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"breeds",
+						":id"
+					],
+					"variable": [
+						{
+							"id": "86a42ff4-fc69-4503-be34-7c710b763176",
+							"key": "id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a breed",
+			"id": "44601312-f482cb95-f25e-4c8e-9b1a-4fe0b3a5c57b",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/breeds/:id",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"breeds",
+						":id"
+					],
+					"variable": [
+						{
+							"id": "37ec9793-8dda-4c7e-aefe-105a908110ea",
+							"key": "id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "rsgjdfshgklfhdgfldhkrdhsgkd",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "token",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				],
+				"id": "c2fb47bb-796a-4553-8a1f-8c8c529c8ea2"
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				],
+				"id": "14703e13-78f7-485f-9024-f89ffc87c4f0"
+			}
+		}
+	]
+}
