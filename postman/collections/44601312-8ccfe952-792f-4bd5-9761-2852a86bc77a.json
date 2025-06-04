@@ -72,12 +72,19 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "{{baseURL}}/breeds",
+					"raw": "{{baseURL}}/breeds?nfkjdhskjfhds",
 					"host": [
 						"{{baseURL}}"
 					],
 					"path": [
 						"breeds"
+					],
+					"query": [
+						{
+							"key": "nfkjdhskjfhds",
+							"value": null,
+							"type": "text"
+						}
 					]
 				}
 			},
